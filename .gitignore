@@ -1,6 +1,3 @@
-#TEST
-svg2png.md
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
