@@ -1,13 +1,11 @@
 from setuptools import setup, find_packages
+from svg2png import version
 
 setup(
     name='svg2png',
-    version='1.0',
+    version=version,
     packages=find_packages(),
     install_requires=[],
-    entry_points={
-        'console_scripts': [],
-    },
     author='foxypiratecove37350',
     author_email='foxypiratecovefnaf12@gmail.com',
     description='Convert a SVG file into a PNG file using Inkscape',
