@@ -1,28 +1,33 @@
-## svg2png
+# `svg2png`
 
-svg2png is a Python package that provides a simple function to convert SVG (Scalable Vector Graphics) files into PNG (Portable Network Graphics) format. The conversion is performed using Inkscape, a powerful vector graphics editor.
+`svg2png` is a Python package that provides a simple function to convert SVG graphics into PNG format.
 
-### Installation
+## Installation
 
-To install svg2png, you can use `pip`, the Python package installer. Run the following command:
-
-```
-pip install svg2png
+```shell
+pip install `svg2png`
 ```
 
-### Features
-- **SVG to PNG Conversion**: Utilizes Inkscape to handle the conversion.
-- **Validation**: Checks if the input file is a valid SVG and if Inkscape is installed and accessible.
-- **Error Handling**: Provides meaningful error messages if the SVG file is invalid or if Inkscape is not found.
+## Features
 
-### Usage
-To convert an SVG file to PNG, simply call the `svg2png` function with the path to your SVG file:
+- Both files and direct content
+- To files or return binary stream
+- **SVG 1.1 2nd Edition**
+
+## Usage
+
+To convert an SVG file to PNG, simply call the `svg2png` functions with the path to your SVG file:
 
 ```python
-from svg2png import svg2png
+import svg2png
 
-svg2png('path/to/your/file.svg')
+svg2png.svg2png('file.svg') # auto redirect to the appropriate function, deprecated
+png_bin: bytes = svg2png.svg_path2png_bin('file.svg')
+svg2png.svg_path2png_path('file.svg', 'new.png') # output optional, defaults to [filename].png
+svg2png.svg_code2png_path('<svg xmlns="...">...</svg>', 'file.png')
+png_bin: bytes = svg2png.svg_code2png_bin('<svg xmlns="...">...</svg>')
 ```
 
-### Requirements
+## Requirements
+
 - **Inkscape**: Ensure that Inkscape is installed and added to your system `PATH`.
