@@ -8,7 +8,7 @@ setup(
     install_requires=[],
     author='foxypiratecove37350',
     author_email='foxypiratecovefnaf12@gmail.com',
-    description='Convert a SVG file into a PNG file using Inkscape',
+    description='Render an SVG file into a PNG file',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
     url='https://github.com/foxypiratecove37350/svg2png',

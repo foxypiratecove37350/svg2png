@@ -1,40 +1,41 @@
 """"
-Convert a SVG file into a PNG file using Inkscape
+Render an SVG file into a PNG file
 """
 
-import subprocess
-import xml.etree.ElementTree as ET
+from typing import Optional
+from lxml import etree
+from pathlib import Path
 
-def svg2png(inputfile):
+from .errors import InvalidSVGError
+
+def svg2png(input: str | Path) -> Optional[bytes]:
     """
-    Convert a SVG file into a PNG file using Inkscape
+    Render an SVG file into a PNG file
 
     Args:  
-        inputfile (str): Path to the SVG file.
+        input (str): Path to the SVG file or SVG content.
 
     Returns:
         None
 
     Raises:  
-        ValueError: If the SVG file isn't valid or if Inkscape isn't installed/in the ``PATH``.
+        InvalidSVGError: If the SVG content isn't valid.
 
     Example:
         >>> svg2png('icon.svg')
         None
     """
 
-    try:
-        ET.parse(inputfile)
-    except ET.ParseError:
-        raise ValueError("The file isn't a valid SVG")
+    raise NotImplementedError
 
-    try:
-        subprocess.check_call(
-            [
-                'inkscape',
-                '--export-type=png',
-                inputfile
-            ]
-        )
-    except:
-        raise ValueError("Inkscape is not installed or not in the PATH")
+def svg_path2png_path(input_path: Path, output_path: Optional[Path]) -> None:
+    raise NotImplementedError
+
+def svg_path2png_bin(input_path: Path) -> bytes:
+    raise NotImplementedError
+
+def svg_code2png_path(input_code: str, output_path: Path) -> None:
+    raise NotImplementedError
+
+def svg_code2png_bin(input_code: str) -> bytes:
+    raise NotImplementedError
