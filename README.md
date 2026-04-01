@@ -1,6 +1,7 @@
 # `svg2png`
 
-`svg2png` is a Python package that provides a simple function to convert SVG graphics into PNG format.
+`svg2png` is a Python package that provides a simple function to convert SVG graphics
+into PNG format.
 
 ## Installation
 
@@ -16,7 +17,8 @@ pip install `svg2png`
 
 ## Usage
 
-To convert an SVG file to PNG, simply call the `svg2png` functions with the path to your SVG file:
+To convert an SVG file to PNG, simply call the `svg2png` functions with the path
+to your SVG file:
 
 ```python
 import svg2png
@@ -27,7 +29,3 @@ svg2png.svg_path2png_path('file.svg', 'new.png') # output optional, defaults to 
 svg2png.svg_code2png_path('<svg xmlns="...">...</svg>', 'file.png')
 png_bin: bytes = svg2png.svg_code2png_bin('<svg xmlns="...">...</svg>')
 ```
-
-## Requirements
-
-- **Inkscape**: Ensure that Inkscape is installed and added to your system `PATH`.
