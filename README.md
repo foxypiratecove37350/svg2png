@@ -13,7 +13,7 @@ pip install `svg2png`
 
 - Both files and direct content
 - To files or return binary stream
-- **SVG 1.1 2nd Edition**
+- [**SVG 1.1 Second Edition**](https://www.w3.org/TR/SVG11)
 
 ## Usage
 
