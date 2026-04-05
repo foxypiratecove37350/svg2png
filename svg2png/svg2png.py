@@ -19,7 +19,10 @@ def svg2png(input: str | Path) -> Optional[bytes]:
 		Optional[bytes]: PNG data
 	"""
 
-	raise NotImplementedError
+	if (input_path := Path(input)).exists() and input_path.is_file():
+		svg_path2png_path(input_path)
+	else:
+		return svg_code2png_bin(input)
 
 def svg_path2png_path(input_path: Path, output_path: Optional[Path]) -> None:
 	"""Render SVG file into PNG file
