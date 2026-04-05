@@ -1,21 +1,27 @@
 from setuptools import setup, find_packages # type: ignore
-from svg2png import version
+from svg2png import (
+    __project_name__,
+    __version__,
+    __author__,
+    __description__,
+    __url__,
+    __license__
+)
 
 setup(
-    name='svg2png',
-    version=version,
+    name=__project_name__,
+    version=__version__,
     packages=find_packages(),
-    install_requires=[],
-    author='foxypiratecove37350',
-    author_email='foxypiratecovefnaf12@gmail.com',
-    description='Render an SVG file into a PNG file',
-    long_description=open('README.md').read(),
+    author=__author__,
+    description=__description__,
+    long_description=open('README.md', 'r', encoding='utf-8').read(),
     long_description_content_type='text/markdown',
-    url='https://github.com/foxypiratecove37350/svg2png',
+    url=__url__,
     classifiers=[
         'Programming Language :: Python :: 3',
         'License :: OSI Approved :: GNU General Public License v2 (GPLv2)',
         'Operating System :: OS Independent',
     ],
-    license='GPL-2.0',
+    license=__license__,
+    install_requires=open('requirements.txt', 'r', encoding='utf-8').read().splitlines()
 )
