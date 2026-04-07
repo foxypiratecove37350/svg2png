@@ -18,4 +18,4 @@ def render(input_code: str, input_path: Optional[Path] = None) -> bytes:
 		InvalidSVGError: invalid SVG code
 	"""
 
-	raise InvalidSVGError(input_code, input_path)
+	raise InvalidSVGError(input_code, input_path=input_path)
