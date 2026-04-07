@@ -6,7 +6,7 @@ into PNG format.
 ## Installation
 
 ```shell
-pip install `svg2png`
+pip install svg2png
 ```
 
 ## Features
@@ -29,3 +29,25 @@ svg2png.svg_path2png_path('file.svg', 'new.png') # output optional, defaults to 
 svg2png.svg_code2png_path('<svg xmlns="...">...</svg>', 'file.png')
 png_bin: bytes = svg2png.svg_code2png_bin('<svg xmlns="...">...</svg>')
 ```
+
+## Contributing
+
+1. Clone the repository:
+
+   ```shell
+   git clone https://github.com/foxypiratecove37350/svg2png
+   ```
+
+2. Create a virtual environment:
+
+   ```shell
+   python -m venv .venv
+   ```
+
+3. Install in editable mode:
+
+   ```shell
+   pip install -e .
+   ```
+
+   It should automatically install build and runtime dependencies from the [`pyproject.toml`](./pyproject.toml)
