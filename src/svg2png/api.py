@@ -24,7 +24,7 @@ def svg2png(input_svg: str | Path) -> Optional[bytes]:
 	else:
 		return svg_code2png_bin(input_svg)
 
-def svg_path2png_path(input_path: Path, output_path: Optional[Path]) -> None:
+def svg_path2png_path(input_path: Path, output_path: Optional[Path] = None) -> None:
 	"""Render SVG file into PNG file
 
 	Args:
