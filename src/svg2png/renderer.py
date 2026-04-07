@@ -10,6 +10,7 @@ def render(input_code: str, input_path: Optional[Path] = None) -> bytes:
 
 	Args:
 		input_code (str): SVG code
+		input_path (Optional[Path]): input SVG's path (for error messages)
 
 	Returns:
 		bytes: PNG binary data
@@ -18,4 +19,17 @@ def render(input_code: str, input_path: Optional[Path] = None) -> bytes:
 		InvalidSVGError: invalid SVG code
 	"""
 
-	raise InvalidSVGError(input_code, input_path=input_path)
+	validate(input_code, input_path=input_path)
+
+def validate(input_code: str, input_path: Optional[Path] = None) -> None:
+	"""Validate given SVG code
+
+	Args:
+		input_code (str): SVG code
+		input_path (Optional[Path]): input SVG's path (for error messages)
+
+	Raises:
+		InvalidSVGError: invalid SVG code
+	"""
+
+	raise NotImplementedError
