@@ -9,20 +9,20 @@ from warnings import deprecated
 from .renderer import render
 
 @deprecated("Use specialized functions instead.")
-def svg2png(input: str | Path) -> Optional[bytes]:
+def svg2png(input_svg: str | Path) -> Optional[bytes]:
 	"""Render SVG into PNG
 
 	Args:
-		input (str | Path): input SVG's path or SVG code
+		input_svg (str | Path): input SVG's path or SVG code
 
 	Returns:
 		Optional[bytes]: PNG data
 	"""
 
-	if (input_path := Path(input)).exists() and input_path.is_file():
+	if (input_path := Path(input_svg)).exists() and input_path.is_file():
 		svg_path2png_path(input_path)
 	else:
-		return svg_code2png_bin(input)
+		return svg_code2png_bin(input_svg)
 
 def svg_path2png_path(input_path: Path, output_path: Optional[Path]) -> None:
 	"""Render SVG file into PNG file

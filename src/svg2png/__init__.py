@@ -1,4 +1,4 @@
-from .svg2png import (
+from .api import (
 	svg2png,
 	svg_path2png_path,
 	svg_path2png_bin,
