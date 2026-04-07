@@ -1,4 +1,4 @@
-""""
+"""
 Render an SVG file into a PNG file
 """
 
