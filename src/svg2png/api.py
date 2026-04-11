@@ -40,7 +40,7 @@ def svg_path2png_path(input_path: Path, output_path: Optional[Path] = None) -> N
 	if not output_path:
 		output_path = input_path.with_suffix('.png')
 
-	with open(input_path, 'r') as input_file:
+	with open(input_path, 'r', encoding='utf-8') as input_file:
 		input_code = input_file.read()
 	
 	svg_code2png_path(input_code, output_path, input_path=input_path)
@@ -55,7 +55,7 @@ def svg_path2png_bin(input_path: Path) -> bytes:
 		bytes: PNG data
 	"""
 	
-	with open(input_path, 'r') as input_file:
+	with open(input_path, 'r', encoding='utf-8') as input_file:
 		input_code = input_file.read()
 	
 	return svg_code2png_bin(input_code, input_path=input_path)
@@ -84,4 +84,4 @@ def svg_code2png_bin(input_code: str, input_path: Optional[Path] = None) -> byte
 		bytes: PNG data
 	"""
 
-	return render(input_code)
+	return render(input_code, input_path=input_path)
